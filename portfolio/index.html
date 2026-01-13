@@ -1,1 +1,180 @@
-<link rel="stylesheet" href="style.css">
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ブラウザのタブに表示されるタイトル -->
+  <title>秋満 純平｜ポートフォリオ</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ページ最上部のヘッダー全体 -->
+<header class="header">
+
+  <!-- ヘッダー内の横並びレイアウト用コンテナ -->
+  <div class="header-inner">
+
+    <!-- プロフィールアイコン画像 -->
+    <img src="../image/jum.png" alt="アイコン" class="icon">
+
+    <div>
+      <!-- 名前 -->
+      <h1>秋満 純平</h1>
+      <p class="subtitle">ゲームプログラマー志望</p>
+    </div>
+  </div>
+
+  <nav class="nav">
+    <!-- 自己紹介セクションへ移動 -->
+    <a href="#about">自己紹介</a>
+
+    <!-- 制作物セクションへ移動 -->
+    <a href="#projects">制作物</a>
+
+    <!-- スキルセクションへ移動 -->
+    <a href="#skills">スキル</a>
+
+    <!-- リンクセクションへ移動 -->
+    <a href="#links">リンク</a>
+  </nav>
+</header>
+
+<!-- ページ中央の本文エリア -->
+<main class="container">
+
+  <!-- 自己紹介 -->
+  <section id="about">
+
+    <h2>自己紹介</h2>
+
+    <p>
+      ゲームプログラマーとして、Unityを中心にゲーム制作を行っています。<br>
+      チーム開発と個人制作の両方を経験しています。
+    </p>
+  </section>
+
+  <!-- 制作物 -->
+  <section id="projects">
+
+    <h2>制作物</h2>
+
+    <!-- 制作物カードの一覧 -->
+    <div class="project-list">
+
+      <!-- 1作品分 -->
+      <div class="project-card">
+
+        <h3>がちまもりファーマーズ</h3>
+
+        <!-- ゲーム紹介動画 -->
+        <video controls muted>
+          <source src="../video/ガチまもりファーマーズ.mp4" type="video/mp4">
+          動画を再生できません
+        </video>
+
+        <!-- 使用技術リスト -->
+        <ul class="project-tech">
+          <li>エンジン：Unity</li>
+          <li>言語：C#</li>
+          <li>ジャンル：タワーディフェンス</li>
+        </ul>
+
+        <div class="project-links">
+          <!-- GitHubリポジトリへのリンク -->
+          <a href="https://github.com/jum116/GachimamoriFarmers" target="_blank" rel="noopener noreferrer">
+            GitHubでソースを見る
+          </a>
+
+          <!-- Windowsビルドのダウンロードリンク -->
+          <a href="https://github.com/jum116/GachimamoriFarmers/raw/main/Release/GachimamoriFarmers.zip" target="_blank" rel="noopener noreferrer">
+            Windows版をダウンロード
+          </a>
+        </div>
+      </div>
+
+      <!-- 1作品分 -->
+      <div class="project-card">
+
+        <h3>ゲームタイトル</h3>
+
+        <!-- ゲーム紹介動画 -->
+        <video controls muted>
+          <source src="#" type="video/mp4">
+          動画を再生できません
+        </video>
+
+        <!-- 使用技術リスト -->
+        <ul class="project-tech">
+          <li>エンジン：</li>
+          <li>言語：</li>
+          <li>ジャンル：</li>
+        </ul>
+
+        <div class="project-links">
+          <!-- GitHubリポジトリへのリンク -->
+          <a href="#" target="_blank" rel="noopener noreferrer">
+            GitHubでソースを見る
+          </a>
+
+          <!-- Windowsビルドのダウンロードリンク -->
+          <a href="#" target="_blank" rel="noopener noreferrer">
+            Windows版をダウンロード
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- スキル一覧 -->
+  <section id="skills">
+
+    <h2>スキル</h2>
+
+    <div class="skill-category">
+      <!-- プログラミング言語 -->
+      <h3>プログラミング言語</h3>
+      <ul>
+        <li>C#</li>
+        <li>C++</li>
+      </ul>
+    </div>
+
+    <div class="skill-category">
+      <!-- 使用可能なゲームエンジン -->
+      <h3>ゲームエンジン</h3>
+      <ul>
+        <li>Unity</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 外部リンク -->
+  <section id="links">
+
+    <h2>リンク</h2>
+
+    <ul class="link-list">
+      <li>
+        <!-- GitHubプロフィール -->
+        <a href="https://github.com/jum116" target="_blank" rel="noopener noreferrer">
+          GitHub
+        </a>
+      </li>
+    </ul>
+  </section>
+
+</main>
+
+<!-- ページ下部のフッター -->
+<footer class="footer">
+  <p>© 2026 秋満 純平</p>
+</footer>
+
+</body>
+</html>
