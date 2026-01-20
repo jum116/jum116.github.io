@@ -1,216 +1,332 @@
-/* 全要素にbox-sizingを適用してサイズ計算を安定させる */
+/*-------------------------------------------------------------
+  全体設定
+-------------------------------------------------------------*/
+
+/* すべての要素に box-sizing を適用し、padding や border を含めて幅・高さを計算する */
 * {
   box-sizing: border-box;
 }
 
 /* ページ全体の基本スタイル */
 body {
-  margin: 0;              /* ブラウザ標準の余白を消す */
-  font-family: "Segoe UI", "Hiragino Kaku Gothic ProN", sans-serif; /* フォント指定 */
-  background: #f5f7fa;  /* 背景色 */
-  color: #333;          /* 文字色 */
+  margin: 0; /* ブラウザ標準の余白を削除 */
+  font-family: "Segoe UI", "Hiragino Kaku Gothic ProN", sans-serif; /* フォント指定（日本語・英語対応） */
+  background: #f5f7fa; /* ページ背景色 */
+  color: #333; /* ページ内の文字色 */
 }
 
-/* 見出しの余白をリセット */
+/* 見出しの余白をリセット（デフォルトマージンを消す） */
 h1, h2, h3 {
   margin: 0;
 }
 
-/* セクション間の余白 */
+/* セクション間の余白を統一 */
 section {
   margin-bottom: 56px;
 }
 
-/* セクション見出し */
+/* セクション見出し（h2）のスタイル */
 section h2 {
-  font-size: 1.6rem;                  /* 文字サイズ */
-  margin-bottom: 24px;                /* 下余白 */
-  padding-bottom: 8px;                /* 下線との距離 */
-  border-bottom: 2px solid #d0d7e2; /* 下線 */
+  font-size: 1.6rem; /* 見出しの文字サイズ */
+  margin-bottom: 24px; /* 下余白 */
+  padding-bottom: 8px; /* 下線との距離 */
+  border-bottom: 2px solid #d0d7e2; /* 下線を表示 */
 }
 
-/* 小見出し */
+/* 小見出し（h3）の下余白 */
 section h3 {
   margin-bottom: 8px;
 }
 
-/* ヘッダー背景と余白 */
+/*-------------------------------------------------------------
+  ヘッダー関連
+-------------------------------------------------------------*/
+
+/* ヘッダー全体 */
 .header {
   background-image: url("../image/背景.jpg"); /* 背景画像 */
-  background-size: cover;                     /* 画面いっぱいに表示 */
-  background-position: center;                /* 中央寄せ */
-  color: #fff;                              /* 文字色 */
-  padding: 80px 100px;                        /* 内側余白 */
+  background-size: cover; /* 画像を画面いっぱいに拡大 */
+  background-position: center; /* 画像の中心を表示 */
+  color: #fff; /* ヘッダー内の文字色 */
+  padding: 80px 100px; /* 上下80px、左右100pxの内側余白 */
 }
 
-/* ヘッダー内の横並び */
+/* ヘッダー内の横並びレイアウト */
 .header-inner {
-  max-width: 960px;     /* 最大幅 */
-  margin: 0 auto;       /* 中央寄せ */
-  display: flex;        /* 横並び */
-  align-items: center;  /* 縦中央 */
-  gap: 30px;            /* 要素間の間隔 */
+  max-width: 960px; /* 最大幅 */
+  margin: 0 auto; /* 中央寄せ */
+  display: flex; /* 横並びにする */
+  align-items: center; /* 縦方向の中央揃え */
+  gap: 30px; /* 子要素間の隙間 */
 }
 
-/* アイコン画像 */
+/* プロフィールアイコン */
 .icon {
-  width: 64px;
-  height: 64px;
-  border-radius: 50%; /* 円形 */
+  width: 64px; /* 横幅 */
+  height: 64px; /* 高さ */
+  border-radius: 50%; /* 円形にする */
 }
 
-/* サブタイトル */
+/* ヘッダー内サブタイトル */
 .subtitle {
-  font-size: 0.9rem;
-  opacity: 0.9;
+  font-size: 0.9rem; /* 少し小さめの文字 */
+  opacity: 0.9; /* 少し透明にして柔らかく見せる */
 }
 
-/* ナビゲーション */
+/* ナビゲーション全体 */
 .nav {
-  max-width: 960px;
-  margin: 12px auto 0;
+  max-width: 960px; /* 最大幅 */
+  margin: 12px auto 0; /* 上余白12px、左右中央寄せ、下余白なし */
 }
 
-/* ナビリンク */
+/* ナビゲーションリンク */
 .nav a {
-  margin-right: 20px;
-  color: #fff;
-  text-decoration: none;
-  font-weight: 500;
-  position: relative; /* 下線用 */
+  margin-right: 20px; /* 隣のリンクとの間隔 */
+  color: #fff; /* 文字色 */
+  text-decoration: none; /* 下線を消す */
+  font-weight: 500; /* 少し太めの文字 */
+  position: relative; /* 擬似要素下線用に必要 */
 }
 
-/* PC用の黄色下線 */
+/* PC用の下線アニメーション */
 .nav a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -6px;
-  width: 0;
-  height: 2px;
-  background: #ffd166;
-  transition: width 0.3s;
+  content: ""; /* 空のコンテンツ */
+  position: absolute; /* 絶対配置 */
+  left: 0; /* 左端に配置 */
+  bottom: -6px; /* リンク下6pxに配置 */
+  width: 0; /* 初期幅0（アニメーションで伸ばす） */
+  height: 2px; /* 下線の高さ */
+  background: #ffd166; /* 下線の色（黄色） */
+  transition: width 0.3s; /* 幅が変わるとき0.3秒でアニメーション */
 }
 
-/* ホバー時に下線を表示 */
+/* ホバー時に下線を横に広げる */
 .nav a:hover::after {
-  width: 100%;
+  width: 100%; /* リンク全体に下線を広げる */
 }
 
-/* 本文コンテナ */
+/*-------------------------------------------------------------
+  本文コンテナ
+-------------------------------------------------------------*/
+
+/* ページ中央のコンテンツ幅と余白 */
 .container {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 40px 16px;
+  max-width: 960px; /* 最大幅 */
+  margin: 0 auto; /* 中央寄せ */
+  padding: 40px 16px; /* 上下40px、左右16pxの余白 */
 }
+
+/*-------------------------------------------------------------
+  制作物カード関連
+-------------------------------------------------------------*/
 
 /* 制作物一覧 */
 .project-list {
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
+  display: flex; /* フレックスボックス */
+  flex-direction: column; /* 縦方向に並べる */
+  gap: 32px; /* 各カード間の間隔 */
 }
 
-/* 制作物カード */
+/* 個別制作物カード */
 .project-card {
-  background: #fff;
-  padding: 24px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  background: #fff; /* 白背景 */
+  padding: 24px; /* 内側余白 */
+  border-radius: 12px; /* 角丸 */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08); /* 影で浮き上がらせる */
 }
 
-/* 動画サイズ調整 */
+/* 制作物動画 */
 .project-card video {
-  width: 100%;
-  margin: 16px 0;
-  border-radius: 8px;
+  width: 100%; /* 横幅100% */
+  aspect-ratio: 16/9; /* 横16:縦9の比率を維持 */
+  margin: 16px 0; /* 上下余白16px */
+  border-radius: 8px; /* 角丸 */
 }
 
 /* 技術リスト */
 .project-tech {
-  padding-left: 18px;
-  margin-bottom: 12px;
+  padding-left: 18px; /* 左側にインデント */
+  margin-bottom: 12px; /* 下余白 */
 }
 
 /* 制作物リンク */
 .project-links a {
-  margin-right: 16px;
-  color: #2c5fa8;
-  font-weight: bold;
-  text-decoration: none;
+  margin-right: 16px; /* リンク間のスペース */
+  color: #2c5fa8; /* リンク色（青） */
+  font-weight: bold; /* 太字 */
+  text-decoration: none; /* 下線なし */
 }
 
-/* リンクホバー */
+/* リンクホバー時 */
 .project-links a:hover {
-  text-decoration: underline;
+  text-decoration: underline; /* 下線を表示 */
 }
 
-/* スキルカテゴリ */
+/*-------------------------------------------------------------
+  スキル関連
+-------------------------------------------------------------*/
+
+/* スキルカテゴリ全体 */
 .skill-category {
-  margin-bottom: 24px;
+  margin-bottom: 24px; /* 下余白 */
 }
 
 /* スキルリスト */
 .skill-category ul {
-  padding-left: 18px;
+  padding-left: 18px; /* 左インデント */
 }
 
-/* リンク一覧 */
+/* スキル円グラフ全体 */
+.skill-chart {
+  display: flex; /* フレックス */
+  flex-wrap: wrap; /* スマホで折り返す */
+  gap: 24px; /* アイテム間の間隔 */
+  justify-content: flex-start; /* 左揃え */
+}
+
+/* 個別スキル */
+.skill {
+  text-align: left; /* 左揃え */
+}
+
+/* ドーナツ型円グラフ共通設定 */
+.circle {
+  width: 100px; /* 横幅 */
+  height: 100px; /* 高さ */
+  border-radius: 50%; /* 円形 */
+  position: relative; /* 擬似要素用に相対配置 */
+}
+
+/* 円グラフ中央のくり抜き */
+.circle::before {
+  content: ""; /* 空のコンテンツ */
+  width: 60px; /* くり抜きの幅 */
+  height: 60px; /* くり抜きの高さ */
+  background: #f5f7fa; /* 背景色と同じ色でくり抜き */
+  border-radius: 50%; /* 円形 */
+  position: absolute; /* 絶対配置 */
+  top: 50%; /* 縦中央 */
+  left: 50%; /* 横中央 */
+  transform: translate(-50%, -50%); /* 中央揃え */
+  z-index: 1; /* 前面より下 */
+}
+
+/* 円グラフ内の文字 */
+.circle-text {
+  position: absolute; /* 絶対配置 */
+  left: 50%; /* 横中央 */
+  top: 50%; /* 縦中央 */
+  transform: translate(-50%, -50%); /* 中央揃え */
+  font-weight: bold; /* 太字 */
+  color: #333; /* 文字色 */
+  z-index: 2; /* 中央のくり抜きより前面 */
+  text-align: center; /* 中央揃え */
+}
+
+/* スキルごとの割合 */
+.circle-unity    { background: conic-gradient(#2c5fa8 0% 100%, #e0e0e0 100% 100%); }
+.circle-csharp   { background: conic-gradient(#2c5fa8 0% 100%, #e0e0e0 100% 100%); }
+.circle-git      { background: conic-gradient(#2c5fa8 0% 75%,  #e0e0e0 75% 100%); }
+.circle-cpp      { background: conic-gradient(#2c5fa8 0% 50%,  #e0e0e0 50% 100%); }
+.circle-blender  { background: conic-gradient(#2c5fa8 0% 25%,  #e0e0e0 25% 100%); }
+.circle-dx       { background: conic-gradient(#2c5fa8 0% 10%,  #e0e0e0 10% 100%); }
+
+/*-------------------------------------------------------------
+  リンク一覧
+-------------------------------------------------------------*/
+
+/* リンクリスト全体 */
 .link-list {
-  list-style: none;
-  padding-left: 0;
+  list-style: none; /* デフォルトのリストマークを消す */
+  padding-left: 0; /* 左余白を消す */
 }
 
 /* リンク色 */
 .link-list a {
-  color: #2c5fa8;
-  font-weight: bold;
-  text-decoration: none;
+  color: #2c5fa8; /* 青色 */
+  font-weight: bold; /* 太字 */
+  text-decoration: none; /* 下線なし */
 }
 
-/* フッター */
+/*-------------------------------------------------------------
+  フッター
+-------------------------------------------------------------*/
+
+/* フッター全体 */
 .footer {
-  text-align: center;
-  padding: 16px;
-  background: #e9edf3;
-  font-size: 0.85rem;
+  text-align: center; /* 文字中央揃え */
+  padding: 16px; /* 内側余白 */
+  background: #e9edf3; /* 背景色 */
+  font-size: 0.85rem; /* 少し小さめ文字 */
 }
 
-/* スマホ対応 */
+/*-------------------------------------------------------------
+  スマホ対応（レスポンシブ）
+-------------------------------------------------------------*/
 @media (max-width: 768px) {
 
+  /* ヘッダーの余白を小さくする */
   .header {
     padding: 48px 20px;
   }
 
+  /* ヘッダー内の要素を縦並びにする */
   .header-inner {
-    flex-direction: column;
-    text-align: center;
-    gap: 16px;
+    flex-direction: column; /* 縦並び */
+    text-align: center; /* 中央揃え */
+    gap: 16px; /* 間隔 */
   }
 
+  /* ナビゲーション中央揃え */
   .nav {
     text-align: center;
   }
 
+  /* ナビリンク間隔を狭める */
   .nav a {
     margin: 0 10px;
   }
 
+  /* ナビリンク下線非表示（スマホ用） */
   .nav a::after {
     display: none;
   }
 
+  /* セクション下余白を少し小さく */
   section {
     margin-bottom: 40px;
   }
 
+  /* 見出し文字サイズを少し小さく */
   section h2 {
     font-size: 1.4rem;
   }
 
+  /* 制作物リンクをブロック表示にして縦並び */
   .project-links a {
     display: block;
     margin: 8px 0;
+  }
+
+  /* スキル円グラフ間隔を少し狭める */
+  .skill-chart {
+    gap: 16px;
+  }
+
+  /* 円グラフサイズを小さく */
+  .circle {
+    width: 80px;
+    height: 80px;
+  }
+
+  /* 円グラフ中央くり抜きも縮小 */
+  .circle::before {
+    width: 48px;
+    height: 48px;
+  }
+
+  /* 円グラフ内文字を小さく */
+  .circle-text {
+    font-size: 0.8rem;
   }
 }
