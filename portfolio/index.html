@@ -1,307 +1,191 @@
 <!DOCTYPE html>
 <html lang="ja">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>秋満 純平｜ポートフォリオ</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
 
-  <!-- ブラウザのタブに表示されるタイトル -->
-  <title>秋満 純平｜ポートフォリオ</title>
+  <body>
 
-  <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-
-<!-- ページ最上部のヘッダー全体 -->
-<header class="header">
-
-  <!-- ヘッダー内の横並びレイアウト用コンテナ -->
-  <div class="header-inner">
-
-    <!-- プロフィールアイコン画像 -->
-    <img src="../image/jum.png" alt="アイコン" class="icon">
-
-    <div>
-      <!-- 名前 -->
-      <h1>秋満 純平</h1>
-      <p class="subtitle">ゲームプログラマー志望</p>
-    </div>
-  </div>
-
-  <nav class="nav">
-    <!-- 自己紹介セクションへ移動 -->
-    <a href="#about">自己紹介</a>
-
-    <!-- 制作物セクションへ移動 -->
-    <a href="#projects">制作物</a>
-
-    <!-- スキルセクションへ移動 -->
-    <a href="#skills">スキル</a>
-
-    <!-- リンクセクションへ移動 -->
-    <a href="#links">リンク</a>
-  </nav>
-</header>
-
-<!-- ページ中央の本文エリア -->
-<main class="container">
-
-  <!-- 自己紹介 -->
-  <section id="about">
-
-    <h2>自己紹介</h2>
-
-    <p>
-      ゲームプログラマーとして、Unityを用いたゲーム制作に取り組んでいます。<br>
-      個人制作だけでなくチーム開発の経験もあります。
-    </p>
-  </section>
-
-  <!-- 制作物 -->
-  <section id="projects">
-
-    <h2>制作物</h2>
-
-    <!-- 制作物カードの一覧 -->
-    <div class="project-list">
-
-      <!-- 今作ってるやつ -->
-      <div class="project-card">
-
-        <h3>今作ってるやつ</h3>
-
-        <!-- ゲーム紹介動画 -->
-        <video controls muted>
-          <source src="#" type="video/mp4">
-          動画を再生できません
-        </video>
-
-        <!-- 使用技術リスト -->
-        <ul class="project-tech">
-          <li>制作目的：「ガチャシステム」の実装経験とScriptableObjectを用いたデータ管理スキルを習得することを目的に制作</li>
-          <li>制作期間：2026年1月～2026年2月（約1か月）</li>
-          <li>エンジン：Unity(6000.2.6f2)</li>
-          <li>使用言語：C#</li>
-          <li>ジャンル：放置ゲーム</li>
-        </ul>
-
-        <div class="project-links">
-          <!-- GitHubリポジトリへのリンク -->
-          <a href="https://github.com/jum116/GachaTown" target="_blank" rel="noopener noreferrer">
-            GitHubでソースを見る
-          </a>
-
-          <!-- Windowsビルドのダウンロードリンク -->
-          <a href="https://github.com/jum116/GachaTown/raw/main/Release/GachaTown.zip" target="_blank" rel="noopener noreferrer">
-            Windows版をダウンロード
-          </a>
+    <!-- ヘッダー：ページ最上部 -->
+    <header class="header">
+      <div class="header-inner">
+        <img src="../image/jum.png" alt="アイコン" class="icon">
+        <div>
+          <h1>秋満 純平</h1>
+          <p class="subtitle">ゲームプログラマー志望</p>
         </div>
       </div>
 
-      <!-- ガチまもりファーマーズ -->
-      <div class="project-card">
+      <!-- ページ内リンク -->
+      <nav class="nav">
+        <a href="#about">自己紹介</a>
+        <a href="#projects">制作物</a>
+        <a href="#skills">スキル</a>
+        <a href="#links">リンク</a>
+      </nav>
+    </header>
 
-        <h3>ガチまもりファーマーズ</h3>
+    <main class="container">
 
-        <!-- ゲーム紹介動画 -->
-        <video controls muted>
-          <source src="../video/ガチまもりファーマーズ.mp4" type="video/mp4">
-          動画を再生できません
-        </video>
+      <!-- 自己紹介 -->
+      <section id="about">
+        <h2>自己紹介</h2>
+        <p>
+          ゲームプログラマーとして、Unityを用いたゲーム制作に取り組んでいます。<br>
+          個人制作だけでなくチーム開発の経験もあります。
+        </p>
+      </section>
 
-        <!-- 使用技術リスト -->
-        <ul class="project-tech">
-          <li>制作目的：授業で学んだ「経路探索アルゴリズム(A*)」を実際のゲーム制作に応用することを目的に制作</li>
-          <li>制作期間：2025年10月～2025年11月（約1か月）</li>
-          <li>エンジン：Unity(6000.2.6f2)</li>
-          <li>使用言語：C#</li>
-          <li>ジャンル：タワーディフェンス</li>
-        </ul>
+      <!-- 制作物 -->
+      <section id="projects">
+        <h2>制作物</h2>
 
-        <div class="project-links">
-          <!-- GitHubリポジトリへのリンク -->
-          <a href="https://github.com/jum116/GachimamoriFarmers" target="_blank" rel="noopener noreferrer">
-            GitHubでソースを見る
-          </a>
-
-          <!-- Windowsビルドのダウンロードリンク -->
-          <a href="https://github.com/jum116/GachimamoriFarmers/raw/main/Release/GachimamoriFarmers.zip" target="_blank" rel="noopener noreferrer">
-            Windows版をダウンロード
-          </a>
-        </div>
-      </div>
-
-      <!-- バーガーキュー -->
-      <div class="project-card">
-
-        <h3>バーガーキュー</h3>
-
-        <!-- ゲーム紹介動画 -->
-        <video controls muted>
-          <source src="../video/バーガーキュー.mp4" type="video/mp4">
-          動画を再生できません
-        </video>
-
-        <!-- 使用技術リスト -->
-        <ul class="project-tech">
-          <li>制作目的：授業で経験のある「3Dゲーム」を自作し、3Dゲーム開発の基礎の習得を目的に制作</li>
-          <li>制作期間：2025年7月～2025年9月（約3か月）</li>
-          <li>エンジン：Unity(6000.2.6f2)</li>
-          <li>使用言語：C#</li>
-          <li>ジャンル：クッキングアクション</li>
-        </ul>
-
-        <div class="project-links">
-          <!-- GitHubリポジトリへのリンク -->
-          <a href="https://github.com/jum116/BUGERQUEUE" target="_blank" rel="noopener noreferrer">
-            GitHubでソースを見る
-          </a>
-
-          <!-- Windowsビルドのダウンロードリンク -->
-          <a href="https://github.com/jum116/BUGERQUEUE/raw/main/Release/BUGERQUEUE.zip" target="_blank" rel="noopener noreferrer">
-            Windows版をダウンロード
-          </a>
-        </div>
-      </div>
-
-      <!-- ソードディフェンダー -->
-      <div class="project-card">
-
-        <h3>ソードディフェンダー</h3>
-
-        <!-- ゲーム紹介動画 -->
-        <video controls muted>
-          <source src="../video/ソードディフェンダー.mp4" type="video/mp4">
-          動画を再生できません
-        </video>
-
-        <!-- 使用技術リスト -->
-        <ul class="project-tech">
-          <li>制作目的：Unityの「UI Toolkit」を活用し、UI設計や実装スキルの習得を目的に制作</li>
-          <li>制作期間：2024年12月～2025年2月（約3か月）</li>
-          <li>エンジン：Unity(6000.2.6f2)</li>
-          <li>使用言語：C#</li>
-          <li>ジャンル：タワーディフェンス</li>
-        </ul>
-
-        <div class="project-links">
-          <!-- GitHubリポジトリへのリンク -->
-          <a href="https://github.com/jum116/SwordDefender" target="_blank" rel="noopener noreferrer">
-            GitHubでソースを見る
-          </a>
-
-          <!-- Windowsビルドのダウンロードリンク -->
-          <a href="https://github.com/jum116/SwordDefender/raw/main/Release/SwordDefender.zip" target="_blank" rel="noopener noreferrer">
-            Windows版をダウンロード
-          </a>
-        </div>
-      </div>
-
-      <!-- 文化祭出展作品 -->
-      <div class="project-card">
-
-        <h3>文化祭出展作品（チーム制作）</h3>
-
-        <!-- ゲーム紹介動画 -->
-        <video controls muted>
-          <source src="#" type="video/mp4">
-          動画を再生できません
-        </video>
-
-        <!-- 使用技術リスト -->
-        <ul class="project-tech">
-          <li>制作目的：文化祭展示を目的に制作し、チームでのプログラム実装や「Git」を使用したソース共有や管理を行った</li>
-          <li>制作期間：2024年10月～2024年11月（約1か月）</li>
-          <li>エンジン：Unity(6000.2.6f2)</li>
-          <li>使用言語：C#</li>
-          <li>ジャンル：アクション</li>
-          <li>チーム人数：プログラマー2名（自分含む）</li>
-          <li>自分の役割：敵・ボスキャラクター・Wave制御システムの実装
-            <ul>
-              <li>ステート管理による敵AIの行動遷移（待機・追跡・攻撃・被弾・死亡）の実装</li>
-              <li>Animatorを用いたアニメーションの作成および状態遷移の制御</li>
-              <li>プレイヤーとの当たり判定・ダメージ処理の実装</li>
-              <li>Waveによる敵出現管理を実装し、進行に応じて敵の種類や出現数を調整</li>
+        <div class="project-list">
+          
+          <!-- 制作中 -->
+          <div class="project-card">
+            <h3>制作中</h3>
+            <video controls muted playsinline preload="metadata">
+              <source src="#" type="video/mp4">
+              動画を再生できません
+            </video>
+            <ul class="project-tech">
+              <li>制作目的：「ガチャシステム」の実装経験とScriptableObjectを用いたデータ管理スキルを習得することを目的に制作</li>
+              <li>制作期間：2026年1月～2026年2月（約1か月）</li>
+              <li>エンジン：Unity(6000.2.6f2)</li>
+              <li>使用言語：C#</li>
+              <li>ジャンル：放置ゲーム</li>
             </ul>
-          </li>
+            <div class="project-links">
+              <a href="https://github.com/jum116/GachaTown" target="_blank" rel="noopener noreferrer">GitHubを開く</a>
+              <a href="https://github.com/jum116/GachaTown/raw/main/Release/GachaTown.zip" target="_blank" rel="noopener noreferrer">Windows版をダウンロード</a>
+            </div>
+          </div>
+          
+          <!-- ガチまもりファーマーズ -->
+          <div class="project-card">
+            <h3>ガチまもりファーマーズ</h3>
+            <video controls muted playsinline preload="metadata">
+              <source src="../video/ガチまもりファーマーズ.mp4" type="video/mp4">
+              動画を再生できません
+            </video>
+            <ul class="project-tech">
+              <li>制作目的：授業で学んだ「経路探索アルゴリズム(A*)」を実際のゲーム制作に応用することを目的に制作</li>
+              <li>制作期間：2025年10月～2025年11月（約1か月）</li>
+              <li>エンジン：Unity(6000.2.6f2)</li>
+              <li>使用言語：C#</li>
+              <li>ジャンル：タワーディフェンス</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://github.com/jum116/GachimamoriFarmers" target="_blank" rel="noopener noreferrer">GitHubを開く</a>
+              <a href="https://github.com/jum116/GachimamoriFarmers/raw/main/Release/GachimamoriFarmers.zip" target="_blank" rel="noopener noreferrer">Windows版をダウンロード</a>
+            </div>
+          </div>
 
+          <!-- バーガーキュー -->
+          <div class="project-card">
+            <h3>バーガーキュー</h3>
+            <video controls muted playsinline preload="metadata">
+              <source src="../video/バーガーキュー.mp4" type="video/mp4">
+              動画を再生できません
+            </video>
+            <ul class="project-tech">
+              <li>制作目的：授業で経験のある「3Dゲーム」を自作し、3Dゲーム開発の基礎の習得を目的に制作</li>
+              <li>制作期間：2025年7月～2025年9月（約3か月）</li>
+              <li>エンジン：Unity(6000.2.6f2)</li>
+              <li>使用言語：C#</li>
+              <li>ジャンル：クッキングアクション</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://github.com/jum116/BUGERQUEUE" target="_blank" rel="noopener noreferrer">GitHubを開く</a>
+              <a href="https://github.com/jum116/BUGERQUEUE/raw/main/Release/BUGERQUEUE.zip" target="_blank" rel="noopener noreferrer">Windows版をダウンロード</a>
+            </div>
+          </div>
 
+          <!-- ソードディフェンダー -->
+          <div class="project-card">
+            <h3>ソードディフェンダー</h3>
+            <video controls muted playsinline preload="metadata">
+              <source src="../video/ソードディフェンダー.mp4" type="video/mp4">
+              動画を再生できません
+            </video>
+            <ul class="project-tech">
+              <li>制作目的：Unityの「UI Toolkit」を活用し、UI設計や実装スキルの習得を目的に制作</li>
+              <li>制作期間：2024年12月～2025年2月（約3か月）</li>
+              <li>エンジン：Unity(6000.2.6f2)</li>
+              <li>使用言語：C#</li>
+              <li>ジャンル：タワーディフェンス</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://github.com/jum116/SwordDefender" target="_blank" rel="noopener noreferrer">GitHubを開く</a>
+              <a href="https://github.com/jum116/SwordDefender/raw/main/Release/SwordDefender.zip" target="_blank" rel="noopener noreferrer">Windows版をダウンロード</a>
+            </div>
+          </div>
 
-        </ul>
+          <!-- 文化祭出展作品（チーム制作） -->
+          <div class="project-card">
+            <h3>文化祭出展作品（チーム制作）</h3>
+            <video controls muted playsinline preload="metadata">
+              <source src="#" type="video/mp4">
+              動画を再生できません
+            </video>
+            <ul class="project-tech">
+              <li>制作目的：文化祭展示を目的に制作し、チームでのプログラム実装や「Git」を用いたソース共有や管理を行った</li>
+              <li>制作期間：2024年10月～2024年11月（約1か月）</li>
+              <li>エンジン：Unity(6000.2.6f2)</li>
+              <li>使用言語：C#</li>
+              <li>ジャンル：アクション</li>
+              <li>チーム人数：プログラマー2名（自分含む）</li>
+              <li>自分の役割：敵・ボスキャラクター・Wave制御システムの実装
+                <ul>
+                  <li>ステート管理による敵AIの行動遷移（待機・追跡・攻撃・被弾・死亡）の実装</li>
+                  <li>Animatorを用いたアニメーションの作成および状態遷移の制御</li>
+                  <li>プレイヤーとの当たり判定・ダメージ処理の実装</li>
+                  <li>Waveによる敵出現管理を実装し、進行に応じて敵の種類や出現数を調整</li>
+                </ul>
+              </li>
+            </ul>
+            <div class="project-links">
+              <a href="https://github.com/jum116/Festival" target="_blank" rel="noopener noreferrer">GitHubを開く</a>
+              <a href="https://github.com/jum116/Festival/raw/main/Release/Festival.zip" target="_blank" rel="noopener noreferrer">Windows版をダウンロード</a>
+            </div>
+          </div>
 
-        <div class="project-links">
-          <!-- GitHubリポジトリへのリンク -->
-          <a href="https://github.com/jum116/Festival" target="_blank" rel="noopener noreferrer">
-            GitHubでソースを見る
-          </a>
-
-          <!-- Windowsビルドのダウンロードリンク -->
-          <a href="https://github.com/jum116/Festival/raw/main/Release/SwordDefender.zip" target="_blank" rel="noopener noreferrer">
-            Windows版をダウンロード
-          </a>
         </div>
-      </div>
+      </section>
 
-    </div>
-  </section>
+      <!-- スキル -->
+      <section id="skills">
+        <h2>スキル</h2>
+        <div class="skill-chart">
+          <div class="circle" style="--rate: 100%"><span class="circle-text">Unity</span></div>
+          <div class="circle" style="--rate: 100%"><span class="circle-text">C#</span></div>
+          <div class="circle" style="--rate: 75%"><span class="circle-text">Git</span></div>
+          <div class="circle" style="--rate: 50%"><span class="circle-text">C++</span></div>
+          <div class="circle" style="--rate: 25%"><span class="circle-text">Blender</span></div>
+          <div class="circle" style="--rate: 10%"><span class="circle-text">DirectX</span></div>
+        </div>
+      </section>
 
-  <!-- スキル一覧 -->
-  <section id="skills">
-  <h2>スキル</h2>
+      <!-- リンク -->
+      <section id="links">
+        <h2>リンク</h2>
+        <ul class="link-list">
+          <li><a href="https://github.com/jum116" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+          <li><a href="mailto:akimitsu.jumpei@gmail.com">Gmail</a></li>
+        </ul>
+      </section>
 
-  <div class="skill-chart">
-    <div class="skill">
-      <div class="circle circle-unity"><span class="circle-text">Unity</span></div>
-    </div>
-    <div class="skill">
-      <div class="circle circle-csharp"><span class="circle-text">C#</span></div>
-    </div>
-    <div class="skill">
-      <div class="circle circle-git"><span class="circle-text">Git</span></div>
-    </div>
-    <div class="skill">
-      <div class="circle circle-cpp"><span class="circle-text">C++</span></div>
-    </div>
-    <div class="skill">
-      <div class="circle circle-blender"><span class="circle-text">Blender</span></div>
-    </div>
-    <div class="skill">
-      <div class="circle circle-dx"><span class="circle-text">DirectX</span></div>
-    </div>
-  </div>
-</section>
+    </main>
 
+    <!-- フッター -->
+    <footer class="footer">
+      <p>© 2026 秋満 純平</p>
+    </footer>
 
-  </section>
-
-  <!-- 外部リンク -->
-  <section id="links">
-
-    <h2>リンク</h2>
-
-    <ul class="link-list">
-      <li>
-        <!-- GitHubプロフィール -->
-        <a href="https://github.com/jum116" target="_blank" rel="noopener noreferrer">
-          GitHub
-        </a>
-      </li>
-      <li>
-        <!-- Gmail -->
-        <a href="mailto:akimitsu.jumpei@gmail.com">
-          Gmail
-        </a>
-      </li>
-    </ul>
-  </section>
-
-</main>
-
-<!-- ページ下部のフッター -->
-<footer class="footer">
-  <p>© 2026 秋満 純平</p>
-</footer>
-
-</body>
+  </body>
 </html>
