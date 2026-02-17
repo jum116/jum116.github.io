@@ -14,7 +14,11 @@ body {
 }
 
 /* 見出しのデフォルト余白をリセット */
-h1, h2, h3 {
+h1, h2, h3, h4 {
+  margin: 0;
+}
+
+p {
   margin: 0;
 }
 
@@ -219,6 +223,68 @@ section h3 {
   font-size: 0.85rem;
 }
 
+.modal {
+  display: none; /* 初期状態では非表示 */
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.6);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 80px auto;
+  padding: 24px;
+  border-radius: 12px;
+  max-width: 900px;
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  right: 16px;
+  top: 10px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #666;  /* 通常は少し薄め */
+  transition: transform 0.15s ease, color 0.15s ease, opacity 0.15s ease;
+}
+
+.close-btn:hover {
+  transform: scale(1.15);
+  color: #000;  /* ホバーで黒 */
+}
+
+.close-btn:active {
+  transform: scale(1.05);
+  opacity: 0.7;
+}
+
+.open-modal-btn {
+  background-color: #28a745;   /* 緑 */
+  color: #ffffff;              /* 白文字 */
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 12px;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.open-modal-btn:hover {
+  background-color: #218838;   /* 少し濃い緑 */
+}
+
+.open-modal-btn:active {
+  transform: scale(0.97);      /* 押した感 */
+}
+
+
 /*=== スマートフォン対応（767px以下） ===*/
 
 @media (max-width: 767px) {
@@ -282,5 +348,26 @@ section h3 {
   /* スキル名の文字サイズ調整 */
   .circle-text {
     font-size: 0.8rem;
+  }
+
+  /* モーダル内の余白を調整 */
+  .modal-content {
+    margin: 40px 16px;      /* 上下余白を減らす＋左右に余白 */
+    padding: 20px;          /* 少しコンパクトに */
+    max-width: 100%;        /* 横幅いっぱい使う */
+  }
+
+  /* 閉じるボタン少し上に */
+  .close-btn {
+    right: 12px;
+    top: 8px;
+    font-size: 22px;
+  }
+
+  /* ボタンを少し大きくして押しやすく */
+  .open-modal-btn {
+    width: 100%;
+    font-size: 15px;
+    padding: 12px;
   }
 }
