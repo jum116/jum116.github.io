@@ -18,10 +18,6 @@ h1, h2, h3, h4 {
   margin: 0;
 }
 
-p {
-  margin: 0;
-}
-
 /* 各セクションの下余白 */
 section {
   margin-bottom: 56px;
@@ -282,6 +278,31 @@ section h3 {
 
 .open-modal-btn:active {
   transform: scale(0.97);      /* 押した感 */
+}
+
+.issue-block {
+  margin-bottom: 32px;
+  padding: 20px;
+  background: #f9fbff;
+  border-left: 4px solid #2c5fa8;
+  border-radius: 8px;
+}
+
+.issue {
+  color: #c0392b;  /* 課題は落ち着いた赤 */
+  margin-bottom: 0px;
+}
+
+.solution {
+  color: #2c5fa8;  /* 解決は青 */
+  margin-top: 12px;
+  margin-bottom: 0px;
+}
+
+.issue-block p {
+  line-height: 1.8;
+  margin-top: 0px;
+  margin-bottom: 8px;
 }
 
 
