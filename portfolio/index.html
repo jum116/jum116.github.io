@@ -23,75 +23,50 @@
       <!-- ページ内リンク -->
       <nav class="nav">
         <a href="#about">自己紹介</a>
-        <a href="#projects">制作物</a>
         <a href="#skills">スキル</a>
+        <a href="#projects">個人制作物</a>
+        <a href="#teamprojects">チーム制作物</a>
         <a href="#links">リンク</a>
       </nav>
     </header>
 
     <main class="container">
 
-      <!-- 自己紹介 -->
       <section id="about">
         <h2>自己紹介</h2>
-        <p>
-          ゲームプログラマーとして、Unityを用いたゲーム制作に取り組んでいます。<br>
-          個人制作だけでなくチーム開発の経験もあります。
-        </p>
+
+        <div class="about-content">
+
+          <div class="about-text">
+            <p>
+              Unity / C# を用いたゲーム開発を中心に、
+              個人制作・チーム制作を通して設計力と問題解決力を磨いてきました。<br>
+            </p>
+          </div>
+
+          <canvas id="radarChart" width="250" height="250"></canvas>
+
+        </div>
       </section>
 
-      <!-- 制作物 -->
+      <!-- スキル -->
+      <section id="skills">
+        <h2>スキル</h2>
+        <div class="skill-chart">
+          <div class="circle" style="--rate: 100%"><span class="circle-text">Unity</span></div>
+          <div class="circle" style="--rate: 100%"><span class="circle-text">C#</span></div>
+          <div class="circle" style="--rate: 75%"><span class="circle-text">Git</span></div>
+          <div class="circle" style="--rate: 50%"><span class="circle-text">C++</span></div>
+          <div class="circle" style="--rate: 25%"><span class="circle-text">Blender</span></div>
+          <div class="circle" style="--rate: 10%"><span class="circle-text">DirectX</span></div>
+        </div>
+      </section>
+
+      <!-- 個人制作物 -->
       <section id="projects">
-        <h2>制作物</h2>
+        <h2>個人制作物</h2>
 
         <div class="project-list">
-          
-          <!-- ガチャタウン -->
-          <div class="project-card">
-            <h3>ガチャタウン</h3>
-            <video controls muted playsinline preload="metadata" poster="../image/ガチャタウン.png">
-              <source src="../video/ガチャタウン.mp4" type="video/mp4">
-              動画を再生できません
-            </video>
-            <ul class="project-tech">
-              <li>制作目的：「ガチャシステム」の実装経験とScriptableObjectを用いたデータ管理スキルを習得することを目的に制作</li>
-              <li>制作期間：2026年1月～2026年2月（約1か月）</li>
-              <li>エンジン：Unity(6000.2.6f2)</li>
-              <li>使用言語：C#</li>
-              <li>ジャンル：放置ゲーム</li>
-            </ul>
-            <div class="project-links">
-              <a href="https://github.com/jum116/GachaTown" target="_blank" rel="noopener noreferrer">GitHubを開く</a>
-              <a href="https://github.com/jum116/GachaTown/raw/main/Release/GachaTown.zip" target="_blank" rel="noopener noreferrer">Windows版をダウンロード</a>
-            </div>
-
-            <button class="open-modal-btn" onclick="openModal('modal-gachatown')">詳細を表示</button>
-          </div>
-
-          <!-- モーダル本体 -->
-          <div id="modal-gachatown" class="modal">
-            <div class="modal-content">
-              <span class="close-btn" onclick="closeModal('modal-gachatown')">&times;</span>
-
-              <h2>ガチャタウン</h2>
-
-              <h3>制作時の課題と工夫</h3>
-
-              <h4>課題：ガチャ演出の表現</h4>
-              <p>
-                ガチャを引いた時に、建物が出てくる演出をUnityのUI Toolkitで自然に見せるのが難しかった。<br>
-                特に、カプセルが左右に動いたり壊れたりする動きを表現するのが課題だった。
-              </p>
-
-              <h4>解決方法</h4>
-              <p>
-                USSを使ってアニメーションを作成。カプセルの移動・回転・破壊演出をussのスタイルに定義し、<br>
-                VisualElementにスタイルを付け替えるだけで簡単に演出できるように工夫した。
-              </p>
-
-            </div>
-          </div>
-          
           <!-- ガチまもりファーマーズ -->
           <div class="project-card">
             <h3>ガチまもりファーマーズ</h3>
@@ -121,16 +96,24 @@
 
               <h2>ガチまもりファーマーズ</h2>
 
-              <h3>制作時の課題と工夫</h3>
+              <h3 class="section-title">制作時の課題と工夫</h3>
 
-              <h4>課題：課題を書く</h4>
-              <p>
-                詳しく書く
-              </p>
+              <div class="issue-block">
+                <h4 class="issue">課題：課題を書く</h4>
+                <p>
+                  詳しく書く
+                </p>
 
-              <h4>解決方法</h4>
+                <h4 class="solution">解決方法：解決方法を書く</h4>
+                <p>
+                  詳しく書く
+                </p>
+              </div>
+
+              <h3 class="section-title">本制作を通して得た学び</h3>
+
               <p>
-                解決方法を書く
+                本制作を通して得た学びを書く
               </p>
 
             </div>
@@ -217,6 +200,60 @@
             </div>
           </div>
 
+          <!-- ガチャタウン -->
+          <div class="project-card">
+            <h3>ガチャタウン</h3>
+            <video controls muted playsinline preload="metadata" poster="../image/ガチャタウン.png">
+              <source src="../video/ガチャタウン.mp4" type="video/mp4">
+              動画を再生できません
+            </video>
+            <ul class="project-tech">
+              <li>制作目的：「ガチャシステム」の実装経験とScriptableObjectを用いたデータ管理スキルを習得することを目的に制作</li>
+              <li>制作期間：2026年1月～2026年2月（約1か月）</li>
+              <li>エンジン：Unity(6000.2.6f2)</li>
+              <li>使用言語：C#</li>
+              <li>ジャンル：放置ゲーム</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://github.com/jum116/GachaTown" target="_blank" rel="noopener noreferrer">GitHubを開く</a>
+              <a href="https://github.com/jum116/GachaTown/raw/main/Release/GachaTown.zip" target="_blank" rel="noopener noreferrer">Windows版をダウンロード</a>
+            </div>
+
+            <button class="open-modal-btn" onclick="openModal('modal-gachatown')">詳細を表示</button>
+          </div>
+
+          <!-- モーダル本体 -->
+          <div id="modal-gachatown" class="modal">
+            <div class="modal-content">
+              <span class="close-btn" onclick="closeModal('modal-gachatown')">&times;</span>
+
+              <h2>ガチャタウン</h2>
+
+              <h3 class="section-title">制作時の課題と工夫</h3>
+
+              <div class="issue-block">
+                <h4 class="issue">課題：ガチャ演出の表現</h4>
+                <p>
+                  ガチャを引いた時に、建物が出てくる演出をUnityのUI Toolkitで自然に見せるのが難しかった。<br>
+                  特に、カプセルが左右に動いたり壊れたりする動きを表現するのが課題だった。
+                </p>
+
+                <h4 class="solution">解決方法：解決方法を書く</h4>
+                <p>
+                  USSを使ってアニメーションを作成。カプセルの移動・回転・破壊演出をussのスタイルに定義し、<br>
+                  VisualElementにスタイルを付け替えるだけで簡単に演出できるように工夫した。
+                </p>
+              </div>
+
+              <h3 class="section-title">本制作を通して得た学び</h3>
+
+              <p>
+                本制作を通して得た学びを書く
+              </p>
+
+            </div>
+          </div>
+          
           <!-- ソードディフェンダー -->
           <div class="project-card">
             <h3>ソードディフェンダー</h3>
@@ -307,7 +344,14 @@
             </div>
           </div>
 
-          <!-- WAVEブレイカー（チーム制作） -->
+        </div>
+      </section>
+
+      <!-- チーム制作物 -->
+      <section id="teamprojects">
+        <h2>チーム制作物</h2>
+
+        <!-- WAVEブレイカー（チーム制作） -->
           <div class="project-card">
             <h3>WAVEブレイカー（チーム制作）</h3>
             <video controls muted playsinline preload="metadata" poster="../image/WAVEブレイカー.png">
@@ -404,21 +448,6 @@
 
             </div>
           </div>
-
-        </div>
-      </section>
-
-      <!-- スキル -->
-      <section id="skills">
-        <h2>スキル</h2>
-        <div class="skill-chart">
-          <div class="circle" style="--rate: 100%"><span class="circle-text">Unity</span></div>
-          <div class="circle" style="--rate: 100%"><span class="circle-text">C#</span></div>
-          <div class="circle" style="--rate: 75%"><span class="circle-text">Git</span></div>
-          <div class="circle" style="--rate: 50%"><span class="circle-text">C++</span></div>
-          <div class="circle" style="--rate: 25%"><span class="circle-text">Blender</span></div>
-          <div class="circle" style="--rate: 10%"><span class="circle-text">DirectX</span></div>
-        </div>
       </section>
 
       <!-- リンク -->
