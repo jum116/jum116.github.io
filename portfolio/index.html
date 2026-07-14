@@ -1,471 +1,106 @@
 <!DOCTYPE html>
 <html lang="ja">
 
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>秋満 純平｜ポートフォリオ</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>秋満 純平｜ポートフォリオ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
 
-  <body>
+<body>
 
-    <!-- ヘッダー：ページ最上部 -->
-    <header class="header">
-      <div class="header-inner">
-        <img src="../image/jum.png" alt="アイコン" class="icon">
-        <div>
-          <h1>秋満 純平</h1>
-          <p class="subtitle">ゲームプログラマー志望</p>
-        </div>
+  <!-- ヘッダー：ページ最上部 -->
+  <header class="header">
+    <div class="header-inner">
+      <img src="../image/jum.png" alt="アイコン" class="icon">
+      <div>
+        <h1>秋満 純平</h1>
+        <p class="subtitle">ゲームプログラマー志望</p>
       </div>
+    </div>
 
-      <!-- ページ内リンク -->
-      <nav class="nav">
-        <a href="#about">自己紹介</a>
-        <a href="#skills">スキル</a>
-        <a href="#projects">個人制作物</a>
-        <a href="#teamprojects">チーム制作物</a>
-        <a href="#links">リンク</a>
-      </nav>
-    </header>
+    <!-- ページ内リンク -->
+    <nav class="nav">
+      <a href="#about">自己紹介</a>
+      <a href="#skills">スキル</a>
+      <a href="#projects">個人制作物</a>
+      <a href="#teamprojects">チーム制作物</a>
+      <a href="#links">リンク</a>
+    </nav>
+  </header>
 
-    <main class="container">
+  <main class="container">
 
-      <section id="about">
-        <h2>自己紹介</h2>
+    <section id="about">
+      <h2>自己紹介</h2>
 
-        <div class="about-content">
+      <div class="about-content">
 
-          <div class="about-text">
-            <p>
-              Unity / C# を用いたゲーム開発を中心に、
-              個人制作・チーム制作を通して設計力と問題解決力を磨いてきました。<br>
-            </p>
-          </div>
+        <div class="about-text">
+          <p data-key="introduction"></p>
+        </div>
 
+        <div class="radar-wrapper">
+          <div class="radar-title" data-key="radarTitle"></div>
           <canvas id="radarChart" width="250" height="250"></canvas>
-
         </div>
-      </section>
 
-      <!-- スキル -->
-      <section id="skills">
-        <h2>スキル</h2>
-        <div class="skill-chart">
-          <div class="circle" style="--rate: 100%"><span class="circle-text">Unity</span></div>
-          <div class="circle" style="--rate: 100%"><span class="circle-text">C#</span></div>
-          <div class="circle" style="--rate: 75%"><span class="circle-text">Git</span></div>
-          <div class="circle" style="--rate: 50%"><span class="circle-text">C++</span></div>
-          <div class="circle" style="--rate: 25%"><span class="circle-text">Blender</span></div>
-          <div class="circle" style="--rate: 10%"><span class="circle-text">DirectX</span></div>
-        </div>
-      </section>
+      </div>
+    </section>
+
+    <!-- スキル -->
+    <section id="skills">
+      <h2>スキル</h2>
+      <div class="skill-chart">
+        <div class="circle" style="--rate: 100%"><span class="circle-text">Unity</span></div>
+        <div class="circle" style="--rate: 100%"><span class="circle-text">C#</span></div>
+        <div class="circle" style="--rate: 75%"><span class="circle-text">Git</span></div>
+        <div class="circle" style="--rate: 50%"><span class="circle-text">C++</span></div>
+        <div class="circle" style="--rate: 25%"><span class="circle-text">Blender</span></div>
+        <div class="circle" style="--rate: 10%"><span class="circle-text">DirectX</span></div>
+      </div>
+    </section>
+
+    <!-- 個人制作物 -->
+    <section id="projects">
+      <h2>個人制作物</h2>
+      <div id="project-list" class="project-list"></div>
+    </section>
+
+    <!-- チーム制作物 -->
+    <section id="teamprojects">
+      <h2>チーム制作物</h2>
+      <div id="team-project-list" class="project-list"></div>
+    </section>
+
+    <!-- リンク -->
+    <section id="links">
+      <h2>リンク</h2>
+      <ul class="link-list">
+        <li>
+          <a data-key="github" target="_blank" rel="noopener noreferrer">
+            GitHub
+          </a>
+        </li>
+
+        <li>
+          <a data-key="mail">
+            Gmail
+          </a>
+        </li>
+      </ul>
+    </section>
+
+  </main>
+
+  <!-- フッター -->
+  <footer class="footer">
+    <p>© 2026 秋満 純平</p>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
 
-      <!-- 個人制作物 -->
-      <section id="projects">
-        <h2>個人制作物</h2>
-
-        <div class="project-list">
-          <!-- ガチまもりファーマーズ -->
-          <div class="project-card">
-            <h3>ガチまもりファーマーズ</h3>
-            <video controls muted playsinline preload="metadata" poster="../image/ガチまもりファーマーズ.png">
-              <source src="../video/ガチまもりファーマーズ.mp4" type="video/mp4">
-              動画を再生できません
-            </video>
-            <ul class="project-tech">
-              <li>制作目的：授業で学んだ「経路探索アルゴリズム(A*)」を実際のゲーム制作に応用することを目的に制作</li>
-              <li>制作期間：2025年10月～2025年11月（約1か月）</li>
-              <li>エンジン：Unity(6000.2.6f2)</li>
-              <li>使用言語：C#</li>
-              <li>ジャンル：タワーディフェンス</li>
-            </ul>
-            <div class="project-links">
-              <a href="https://github.com/jum116/GachimamoriFarmers" target="_blank" rel="noopener noreferrer">GitHubを開く</a>
-              <a href="https://github.com/jum116/GachimamoriFarmers/raw/main/Release/GachimamoriFarmers.zip" target="_blank" rel="noopener noreferrer">Windows版をダウンロード</a>
-            </div>
-            
-            <button class="open-modal-btn" onclick="openModal('modal-gachimamori')">詳細を表示</button>
-          </div>
-
-          <!-- モーダル本体 -->
-          <div id="modal-gachimamori" class="modal">
-            <div class="modal-content">
-              <span class="close-btn" onclick="closeModal('modal-gachimamori')">&times;</span>
-
-              <h2>ガチまもりファーマーズ</h2>
-
-              <h3 class="section-title">制作時の課題と工夫</h3>
-
-              <div class="issue-block">
-                <h4 class="issue">課題：課題を書く</h4>
-                <p>
-                  詳しく書く
-                </p>
-
-                <h4 class="solution">解決方法：解決方法を書く</h4>
-                <p>
-                  詳しく書く
-                </p>
-              </div>
-
-              <h3 class="section-title">本制作を通して得た学び</h3>
-
-              <p>
-                本制作を通して得た学びを書く
-              </p>
-
-            </div>
-          </div>
-
-          <!-- BURGER QUEUE -->
-          <div class="project-card">
-            <h3>BURGER QUEUE</h3>
-            <video controls muted playsinline preload="metadata" poster="../image/バーガーキュー.png">
-              <source src="../video/バーガーキュー.mp4" type="video/mp4">
-              動画を再生できません
-            </video>
-            <ul class="project-tech">
-              <li>制作目的：授業で経験のある「3Dゲーム」を自作し、3Dゲーム開発の基礎の習得を目的に制作</li>
-              <li>制作期間：2025年7月～2025年9月（約3か月）</li>
-              <li>エンジン：Unity(6000.2.6f2)</li>
-              <li>使用言語：C#</li>
-              <li>ジャンル：クッキングアクション</li>
-            </ul>
-            <div class="project-links">
-              <a href="https://github.com/jum116/BUGERQUEUE" target="_blank" rel="noopener noreferrer">GitHubを開く</a>
-              <a href="https://github.com/jum116/BUGERQUEUE/raw/main/Release/BUGERQUEUE.zip" target="_blank" rel="noopener noreferrer">Windows版をダウンロード</a>
-            </div>
-
-            <button class="open-modal-btn" onclick="openModal('modal-burgerqueue')">詳細を表示</button>
-          </div>
-
-          <!-- モーダル本体 -->
-          <div id="modal-burgerqueue" class="modal">
-            <div class="modal-content">
-              <span class="close-btn" onclick="closeModal('modal-burgerqueue')">&times;</span>
-
-              <h2>バーガーキュー</h2>
-
-              <h3 class="section-title">制作時の課題と工夫</h3>
-
-              <div class="issue-block">
-                <h4 class="issue">課題：車同士の自然な間隔制御</h4>
-                <p>
-                  車が前の車にめり込む、または不自然に停止する問題が発生した。
-                </p>
-
-                <h4 class="solution">解決方法：Raycastによる前方検知</h4>
-                <p>
-                  BoxColliderの先端からRayを飛ばし、前方に車が存在するかを判定。
-                  条件に応じて移動を制御することで自然な車列を実現した。
-                </p>
-              </div>
-
-              <div class="issue-block">
-                <h4 class="issue">課題：食材の重なり管理</h4>
-                <p>
-                  バンズや皿に具材を重ねる際、位置ずれや重複登録が発生した。
-                </p>
-
-                <h4 class="solution">解決方法：リスト管理とオフセット計算</h4>
-                <p>
-                  具材をListで管理し、追加時にオフセットを計算して配置。
-                  同一具材の重複チェックも行い、整った見た目を維持した。
-                </p>
-              </div>
-
-              <div class="issue-block">
-                <h4 class="issue">課題：営業フェーズの状態管理</h4>
-                <p>
-                  準備中と営業中で処理内容が異なるため、状態遷移の管理が必要だった。
-                </p>
-
-                <h4 class="solution">解決方法：enumによるフェーズ管理</h4>
-                <p>
-                  Salesの状態をenumで定義し、ボタン操作で明確に切り替える構造にした。
-                  日数や来客数の増加処理も一元管理できるよう整理した。
-                </p>
-              </div>
-
-              <h3 class="section-title">本制作を通して得た学び</h3>
-
-              <p>
-                3D空間でのオブジェクト管理や当たり判定制御を通して、
-                状態管理と責務分離の重要性を再認識した。
-                また、複数システムが連携する構造設計について理解を深めることができた。
-              </p>
-
-            </div>
-          </div>
-
-          <!-- ガチャタウン -->
-          <div class="project-card">
-            <h3>ガチャタウン</h3>
-            <video controls muted playsinline preload="metadata" poster="../image/ガチャタウン.png">
-              <source src="../video/ガチャタウン.mp4" type="video/mp4">
-              動画を再生できません
-            </video>
-            <ul class="project-tech">
-              <li>制作目的：「ガチャシステム」の実装経験とScriptableObjectを用いたデータ管理スキルを習得することを目的に制作</li>
-              <li>制作期間：2026年1月～2026年2月（約1か月）</li>
-              <li>エンジン：Unity(6000.2.6f2)</li>
-              <li>使用言語：C#</li>
-              <li>ジャンル：放置ゲーム</li>
-            </ul>
-            <div class="project-links">
-              <a href="https://github.com/jum116/GachaTown" target="_blank" rel="noopener noreferrer">GitHubを開く</a>
-              <a href="https://github.com/jum116/GachaTown/raw/main/Release/GachaTown.zip" target="_blank" rel="noopener noreferrer">Windows版をダウンロード</a>
-            </div>
-
-            <button class="open-modal-btn" onclick="openModal('modal-gachatown')">詳細を表示</button>
-          </div>
-
-          <!-- モーダル本体 -->
-          <div id="modal-gachatown" class="modal">
-            <div class="modal-content">
-              <span class="close-btn" onclick="closeModal('modal-gachatown')">&times;</span>
-
-              <h2>ガチャタウン</h2>
-
-              <h3 class="section-title">制作時の課題と工夫</h3>
-
-              <div class="issue-block">
-                <h4 class="issue">課題：ガチャ演出の表現</h4>
-                <p>
-                  ガチャを引いた時に、建物が出てくる演出をUnityのUI Toolkitで自然に見せるのが難しかった。<br>
-                  特に、カプセルが左右に動いたり壊れたりする動きを表現するのが課題だった。
-                </p>
-
-                <h4 class="solution">解決方法：解決方法を書く</h4>
-                <p>
-                  USSを使ってアニメーションを作成。カプセルの移動・回転・破壊演出をussのスタイルに定義し、<br>
-                  VisualElementにスタイルを付け替えるだけで簡単に演出できるように工夫した。
-                </p>
-              </div>
-
-              <h3 class="section-title">本制作を通して得た学び</h3>
-
-              <p>
-                本制作を通して得た学びを書く
-              </p>
-
-            </div>
-          </div>
-          
-          <!-- ソードディフェンダー -->
-          <div class="project-card">
-            <h3>ソードディフェンダー</h3>
-            <video controls muted playsinline preload="metadata" poster="../image/ソードディフェンダー.png">
-              <source src="../video/ソードディフェンダー.mp4" type="video/mp4">
-              動画を再生できません
-            </video>
-            <ul class="project-tech">
-              <li>制作目的：Unityの「UI Toolkit」を活用し、UI設計や実装スキルの習得を目的に制作</li>
-              <li>制作期間：2024年12月～2025年2月（約3か月）</li>
-              <li>エンジン：Unity(6000.2.6f2)</li>
-              <li>使用言語：C#</li>
-              <li>ジャンル：タワーディフェンス</li>
-            </ul>
-            <div class="project-links">
-              <a href="https://github.com/jum116/SwordDefender" target="_blank" rel="noopener noreferrer">GitHubを開く</a>
-              <a href="https://github.com/jum116/SwordDefender/raw/main/Release/SwordDefender.zip" target="_blank" rel="noopener noreferrer">Windows版をダウンロード</a>
-            </div>
-
-            <button class="open-modal-btn" onclick="openModal('modal-sworddefender')">詳細を表示</button>
-          </div>
-
-          <!-- モーダル本体 -->
-          <div id="modal-sworddefender" class="modal">
-            <div class="modal-content">
-              <span class="close-btn" onclick="closeModal('modal-sworddefender')">&times;</span>
-
-              <h2>ソードディフェンダー</h2>
-
-              <h3 class="section-title">制作時の課題と工夫</h3>
-
-              <div class="issue-block">
-                <h4 class="issue">課題：UI Toolkitの要素が直接編集できず、構造理解に苦戦したこと</h4>
-                <p>
-                  UI Builder上ではスライダーやタブの一部要素がグレーアウトしており、
-                  従来のUGUIのように直感的な編集ができなかった。
-                  そのため、どのように見た目を変更すべきか理解するまでに時間を要した。
-                </p>
-
-                <h4 class="solution">解決方法：USSによるスタイル制御と要素構造の把握</h4>
-                <p>
-                  UI ToolkitはUSSでスタイルを制御する設計であることを理解し、
-                  要素の階層構造を確認しながらクラスを定義してスタイルを適用した。
-                  内部構造を把握した上で必要な要素に対してUSSを適用することで、
-                  意図したデザインに調整できるようになった。
-                </p>
-              </div>
-
-              <div class="issue-block">
-                <h4 class="issue">課題：UIとゲーム内データの整合性維持</h4>
-                <p>
-                  レベルやコインなどの値をUI上で変更する際、
-                  表示と内部データが不整合を起こさない仕組みが必要だった。
-                </p>
-
-                <h4 class="solution">解決方法：ScriptableObjectとデータバインディングの活用</h4>
-                <p>
-                  UIで扱う数値をScriptableObjectで一元管理し、
-                  データバインディングによってUIとデータを連動させた。
-                  これにより、表示と内部ロジックを分離しつつ、
-                  安全に値を更新できる構造を構築した。
-                </p>
-              </div>
-
-              <div class="issue-block">
-                <h4 class="issue">課題：ボタン操作時のフィードバック不足</h4>
-                <p>
-                  標準状態のボタンでは押下時の変化が小さく、
-                  操作している実感が弱いという課題があった。
-                </p>
-
-                <h4 class="solution">解決方法：USSで押下時スタイルを定義</h4>
-                <p>
-                  ボタン専用のクラスをUSSで定義し、押下時のみサイズを拡大するスタイルを適用。
-                  視覚的な変化を加えることで、操作感とUI全体の完成度を向上させた。
-                </p>
-              </div>
-
-            <h3 class="section-title">本制作を通して得た学び</h3>
-
-            <p>
-              UI ToolkitはUGUIとは設計思想が異なり、
-              スタイル（USS）とロジックを分離して管理することが重要であると学んだ。
-              要素構造を理解した上でスタイルを適用することで、
-              再利用性と拡張性の高いUI設計が可能になると実感した。
-            </p>
-
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-      <!-- チーム制作物 -->
-      <section id="teamprojects">
-        <h2>チーム制作物</h2>
-
-        <!-- WAVEブレイカー（チーム制作） -->
-          <div class="project-card">
-            <h3>WAVEブレイカー（チーム制作）</h3>
-            <video controls muted playsinline preload="metadata" poster="../image/WAVEブレイカー.png">
-              <source src="../video/WAVEブレイカー.mp4" type="video/mp4">
-              動画を再生できません
-            </video>
-            <ul class="project-tech">
-              <li>制作目的：文化祭展示を目的に制作し、チームでのプログラム実装や「Git」を用いたソース共有や管理を行った</li>
-              <li>制作期間：2024年10月～2024年11月（約1か月）</li>
-              <li>エンジン：Unity(6000.2.6f2)</li>
-              <li>使用言語：C#</li>
-              <li>ジャンル：アクション</li>
-              <li>チーム人数：プログラマー2名（自分含む）</li>
-              <li>自分の役割：敵・ボスキャラクター・Wave制御システムの実装
-                <ul>
-                  <li>ステート管理による敵AIの行動遷移（待機・追跡・攻撃・被弾・死亡）の実装</li>
-                  <li>Animatorを用いたアニメーションの作成および状態遷移の制御</li>
-                  <li>プレイヤーとの当たり判定・ダメージ処理の実装</li>
-                  <li>Waveによる敵出現管理を実装し、進行に応じて敵の種類や出現数を調整</li>
-                </ul>
-              </li>
-            </ul>
-            <div class="project-links">
-              <a href="https://github.com/jum116/Festival" target="_blank" rel="noopener noreferrer">GitHubを開く</a>
-              <a href="https://github.com/jum116/Festival/raw/main/Release/Festival.zip" target="_blank" rel="noopener noreferrer">Windows版をダウンロード</a>
-            </div>
-          
-            <button class="open-modal-btn" onclick="openModal('modal-wavebreaker')">詳細を表示</button>
-          </div>
-
-          <!-- モーダル本体 -->
-          <div id="modal-wavebreaker" class="modal">
-            <div class="modal-content">
-              <span class="close-btn" onclick="closeModal('modal-wavebreaker')">&times;</span>
-
-              <h2>WAVEブレイカー（チーム制作）</h2>
-
-              <h3 class="section-title">制作時の課題と工夫</h3>
-
-              <div class="issue-block">
-                <h4 class="issue">課題：敵の行動分岐が複雑化し、可読性が低下した</h4>
-                <p>
-                  攻撃条件や追跡条件、被弾処理などを個別のif文で管理していたため、処理の追加や調整を行うたびに条件分岐が増えていきました。<br>
-                  その結果、挙動の把握が難しくなり、意図しない状態遷移が発生することがありました。
-                </p>
-
-                <h4 class="solution">解決方法：ステートパターンを導入し、状態ごとに処理を分離</h4>
-                <p>
-                  Idle・Chase・Attack・Hit・Dieの5つのステートをenumで定義し、
-                  ChangeState()によって遷移を管理しました。<br>
-                  また、stateEnterフラグを用いて「状態に入った瞬間のみ実行する処理」を分離しました。<br>
-                  これにより処理の見通しが良くなり、挙動の追加や修正を安全に行えるようになりました。
-                </p>
-              </div>
-
-              <div class="issue-block">
-                <h4 class="issue">課題：Wave進行に伴う難易度設計のバランス調整</h4>
-                <p>
-                  敵数のみを増やす設計では、後半に敵を1発で倒せてしまい、攻撃力を強化しても戦闘結果が変わらない状況が発生しました。<br>
-                  そのため、強化要素が機能し続ける難易度設計が課題となりました。
-                </p>
-
-                <h4 class="solution">解決方法：Wave数に応じたステータス補正とボス出現の導入</h4>
-                <p>
-                  Wave数に応じて敵のHP・攻撃力に段階的な補正を加えました。<br>
-                  これにより後半でも強化が有効に機能する設計とし、
-                  さらにボス出現でゲーム体験に緩急を持たせました。
-                </p>
-              </div>
-
-              <div class="issue-block">
-                <h4 class="issue">課題：敵全滅後の進行管理が分散していた</h4>
-                <p>
-                  敵がいなくなったタイミングの判定や強化フェーズへの遷移処理が
-                  複数のスクリプトに分散しており、進行フローが把握しづらい状態でした。
-                </p>
-
-                <h4 class="solution">解決方法：GameManagerでWave進行を一元管理</h4>
-                <p>
-                  敵生成時にListへ追加し、死亡時に削除する仕組みに統一しました。<br>
-                  現在の敵数を管理し、全滅時にアップグレードフェーズへ遷移する構造に整理しました。<br>
-                  これにより「戦闘 → 強化 → 次Wave」というループ構造を明確化しました。
-                </p>
-              </div>
-
-              <h3 class="section-title">本制作を通して得た学び</h3>
-
-              <p>
-                ステートによって敵の行動を整理することで、
-                責務を分離した設計の重要性を学んだ。
-                また、チーム制作を通してGitによるソース管理や
-                役割分担の大切さを実践的に学ぶことができた。
-              </p>
-
-            </div>
-          </div>
-      </section>
-
-      <!-- リンク -->
-      <section id="links">
-        <h2>リンク</h2>
-        <ul class="link-list">
-          <li><a href="https://github.com/jum116" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-          <li><a href="mailto:akimitsu.jumpei@gmail.com">Gmail</a></li>
-        </ul>
-      </section>
-
-    </main>
-
-    <!-- フッター -->
-    <footer class="footer">
-      <p>© 2026 秋満 純平</p>
-    </footer>
-
-    <script src="script.js"></script>
-  </body>
 </html>

@@ -14,7 +14,10 @@ body {
 }
 
 /* 見出しのデフォルト余白をリセット */
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   margin: 0;
 }
 
@@ -220,7 +223,8 @@ section h3 {
 }
 
 .modal {
-  display: none; /* 初期状態では非表示 */
+  display: none;
+  /* 初期状態では非表示 */
   position: fixed;
   z-index: 100;
   left: 0;
@@ -228,7 +232,7 @@ section h3 {
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(0,0,0,0.6);
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .modal-content {
@@ -246,13 +250,15 @@ section h3 {
   top: 10px;
   font-size: 24px;
   cursor: pointer;
-  color: #666;  /* 通常は少し薄め */
+  color: #666;
+  /* 通常は少し薄め */
   transition: transform 0.15s ease, color 0.15s ease, opacity 0.15s ease;
 }
 
 .close-btn:hover {
   transform: scale(1.15);
-  color: #000;  /* ホバーで黒 */
+  color: #000;
+  /* ホバーで黒 */
 }
 
 .close-btn:active {
@@ -261,8 +267,10 @@ section h3 {
 }
 
 .open-modal-btn {
-  background-color: #28a745;   /* 緑 */
-  color: #ffffff;              /* 白文字 */
+  background-color: #28a745;
+  /* 緑 */
+  color: #ffffff;
+  /* 白文字 */
   border: none;
   padding: 10px 18px;
   border-radius: 8px;
@@ -273,11 +281,13 @@ section h3 {
 }
 
 .open-modal-btn:hover {
-  background-color: #218838;   /* 少し濃い緑 */
+  background-color: #218838;
+  /* 少し濃い緑 */
 }
 
 .open-modal-btn:active {
-  transform: scale(0.97);      /* 押した感 */
+  transform: scale(0.97);
+  /* 押した感 */
 }
 
 .issue-block {
@@ -289,12 +299,14 @@ section h3 {
 }
 
 .issue {
-  color: #c0392b;  /* 課題は落ち着いた赤 */
+  color: #c0392b;
+  /* 課題は落ち着いた赤 */
   margin-bottom: 0px;
 }
 
 .solution {
-  color: #2c5fa8;  /* 解決は青 */
+  color: #2c5fa8;
+  /* 解決は青 */
   margin-top: 12px;
   margin-bottom: 0px;
 }
@@ -317,13 +329,17 @@ section h3 {
 
 .about-content {
   display: flex;
-  align-items: center;
   justify-content: space-between;
   gap: 32px;
+  align-items: flex-start;
 }
 
 .about-text {
   flex: 1;
+}
+
+.about-text p {
+  margin: 0;
 }
 
 #radarChart {
@@ -336,6 +352,19 @@ section h3 {
   display: block;
   margin: 0;
   padding: 0;
+}
+
+.radar-title {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.radar-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 
@@ -406,9 +435,12 @@ section h3 {
 
   /* モーダル内の余白を調整 */
   .modal-content {
-    margin: 40px 16px;      /* 上下余白を減らす＋左右に余白 */
-    padding: 20px;          /* 少しコンパクトに */
-    max-width: 100%;        /* 横幅いっぱい使う */
+    margin: 40px 16px;
+    /* 上下余白を減らす＋左右に余白 */
+    padding: 20px;
+    /* 少しコンパクトに */
+    max-width: 100%;
+    /* 横幅いっぱい使う */
   }
 
   /* 閉じるボタン少し上に */
