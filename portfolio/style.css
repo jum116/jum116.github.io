@@ -267,6 +267,9 @@ section h3 {
 }
 
 .open-modal-btn {
+  /* ボタン非表示中 */
+  display: none;
+
   background-color: #28a745;
   /* 緑 */
   color: #ffffff;
@@ -278,6 +281,10 @@ section h3 {
   cursor: pointer;
   margin-top: 12px;
   transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.project-links a[href*="raw/main"] {
+  display: none;
 }
 
 .open-modal-btn:hover {
