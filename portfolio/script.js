@@ -161,7 +161,7 @@ function createProjects(list, elementId, isTeam) {
                     GitHubを開く
                 </a>
 
-                <a href="${project.download}" target="_blank">
+                <a href="${project.download}" download">
                     Windows版をダウンロード
                 </a>
 

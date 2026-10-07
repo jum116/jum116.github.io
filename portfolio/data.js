@@ -4,13 +4,10 @@
 const profile = {
     introduction: `
         <h3>学校・開発経験</h3>
-        ・バンタンゲームアカデミー ゲームプログラマー専攻（2027年3月卒業予定）<br>
         ・専門学校入学後からゲーム開発を学び始め、現在3年目です。<br>
         ・UnityとC#を中心にゲーム制作を行っています。<br>
         ・個人制作だけでなく、チームでのゲーム制作も経験しました。<br>
-
         <br>
-
         <h3>好きなゲーム</h3>
         ・スマホゲームが好きです。<br>
         ・自分のペースでじっくり考えながら遊べるゲームが好きです。<br>
@@ -38,7 +35,7 @@ const projects = [
 
         purpose: "授業で学んだ「経路探索アルゴリズム(A*)」を実際のゲーム制作に応用することを目的に制作",
         period: "2025年10月～2025年11月（約1か月）",
-        engine: "Unity(6000.2.6f2)",
+        engine: "Unity(6000.4.3f1)",
         language: "C#",
         genre: "タワーディフェンス",
 
@@ -66,7 +63,7 @@ const projects = [
 
         purpose: "授業で経験のある「3Dゲーム」を自作し、3Dゲーム開発の基礎の習得を目的に制作",
         period: "2025年7月～2025年9月（約3か月）",
-        engine: "Unity(6000.2.6f2)",
+        engine: "Unity(6000.0.29f1)",
         language: "C#",
         genre: "クッキングアクション",
 
@@ -122,7 +119,7 @@ const projects = [
 
         purpose: "Unityの「UI Toolkit」を活用し、UI設計や実装スキルの習得を目的に制作",
         period: "2024年12月～2025年2月（約3か月）",
-        engine: "Unity(6000.2.6f2)",
+        engine: "Unity(6000.0.29f1)",
         language: "C#",
         genre: "タワーディフェンス",
 
@@ -168,7 +165,7 @@ const teamProjects = [
 
         purpose: "文化祭展示を目的に制作し、チームでのプログラム実装や「Git」を用いたソース共有や管理を行った",
         period: "2024年10月～2024年11月（約1か月）",
-        engine: "Unity(6000.2.6f2)",
+        engine: "Unity(6000.0.23f1)",
         language: "C#",
         genre: "アクション",
 
